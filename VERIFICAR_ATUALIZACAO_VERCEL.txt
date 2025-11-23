@@ -1,0 +1,84 @@
+═══════════════════════════════════════════════════════════════
+  VERIFICAR SE A VERCEL ATUALIZOU
+═══════════════════════════════════════════════════════════════
+
+✅ PUSH FEITO COM SUCESSO!
+
+A Vercel deve atualizar automaticamente em 1-2 minutos.
+
+┌─────────────────────────────────────────────────────────────┐
+│ COMO VERIFICAR:                                             │
+└─────────────────────────────────────────────────────────────┘
+
+1. Acesse o dashboard da Vercel:
+   → https://vercel.com/dashboard
+
+2. Procure pelo projeto "gustavo-portfolio"
+
+3. Veja se aparece um novo deploy em andamento:
+   → Status: "Building" ou "Deploying"
+   → Aguarde até aparecer "Ready"
+
+4. Quando estiver "Ready", clique no link do site
+
+5. Recarregue a página (Ctrl + F5 ou Ctrl + Shift + R)
+   → Isso força o navegador a carregar a versão nova
+
+┌─────────────────────────────────────────────────────────────┐
+│ SE NÃO ATUALIZOU AUTOMATICAMENTE:                           │
+└─────────────────────────────────────────────────────────────┘
+
+OPÇÃO 1: FORÇAR REDEPLOY
+
+1. No Vercel, vá em Deployments
+2. Clique nos três pontinhos do último deploy
+3. Clique em "Redeploy"
+4. Aguarde terminar
+
+OPÇÃO 2: VERIFICAR SE HÁ ERROS
+
+1. No Vercel, vá em Deployments
+2. Clique no último deploy
+3. Veja os logs de build
+4. Se houver erro, me mostre que eu ajudo a corrigir
+
+OPÇÃO 3: VERIFICAR CONEXÃO COM GITHUB
+
+1. No Vercel, vá em Settings → Git
+2. Verifique se está conectado ao repositório correto
+3. Se não estiver, reconecte
+
+┌─────────────────────────────────────────────────────────────┐
+│ LIMPAR CACHE DO NAVEGADOR:                                  │
+└─────────────────────────────────────────────────────────────┘
+
+Se o site não atualizou visualmente:
+
+1. Pressione Ctrl + Shift + Delete
+2. Marque "Imagens e arquivos em cache"
+3. Clique em "Limpar dados"
+4. Recarregue a página (Ctrl + F5)
+
+OU
+
+1. Pressione Ctrl + F5 (força recarregar)
+2. Ou Ctrl + Shift + R
+
+┌─────────────────────────────────────────────────────────────┐
+│ O QUE FOI ATUALIZADO:                                       │
+└─────────────────────────────────────────────────────────────┘
+
+✅ Logo corrigida (LogoV4.png)
+✅ Imagem do portfólio com placeholder
+✅ Arquivos atualizados no GitHub
+
+═══════════════════════════════════════════════════════════════
+  TEMPO DE ATUALIZAÇÃO:
+═══════════════════════════════════════════════════════════════
+
+⏰ Normal: 1-2 minutos
+⏰ Pode demorar: até 5 minutos
+⏰ Se passar de 10 minutos, verifique se há erros
+
+═══════════════════════════════════════════════════════════════
+
