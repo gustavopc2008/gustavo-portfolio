@@ -1,0 +1,138 @@
+═══════════════════════════════════════════════════════════════
+  PRÓXIMOS PASSOS - FAZER DEPLOY NA HOSTINGER
+═══════════════════════════════════════════════════════════════
+
+✅ PASSO 1: CONCLUÍDO
+   - Arquivo .env criado e configurado
+
+┌─────────────────────────────────────────────────────────────┐
+│ PASSO 2: FAZER UPLOAD DOS ARQUIVOS PARA A HOSTINGER         │
+└─────────────────────────────────────────────────────────────┘
+
+1. Entre no hPanel da Hostinger
+   → Acesse: https://hpanel.hostinger.com
+   → Faça login com suas credenciais
+
+2. Vá em "File Manager"
+   → Procure no menu lateral ou principal
+
+3. Entre na pasta "public_html"
+   → Essa é a pasta onde seu site vai ficar
+
+4. Delete tudo que tiver lá (se for site novo)
+   → Selecione tudo e delete
+
+5. Faça upload destas pastas e arquivos:
+
+   📁 PASTAS (arraste e solte ou use botão Upload):
+   - .next/          (pasta do build)
+   - public/         (suas imagens e arquivos públicos)
+   - data/           (portfolio.json e testimonials.json)
+
+   📄 ARQUIVOS:
+   - package.json
+   - package-lock.json
+   - next.config.js
+   - tsconfig.json
+   - tailwind.config.ts
+   - postcss.config.js
+   - server.js
+   - .htaccess
+   - .env            (o arquivo que você acabou de criar!)
+
+   ⚠️ IMPORTANTE: 
+   - A pasta .next/ está na pasta do projeto (D:\Portfolio\.next)
+   - O arquivo .env deve ser enviado também!
+
+┌─────────────────────────────────────────────────────────────┐
+│ PASSO 3: CONFIGURAR NODE.JS NO HPANEL                        │
+└─────────────────────────────────────────────────────────────┘
+
+1. No hPanel, procure por "Node.js"
+   → Geralmente está no menu principal
+
+2. Clique em "Node.js"
+
+3. Selecione seu domínio
+
+4. Configure assim:
+   ┌─────────────────────────────────────┐
+   │ Node.js Version: 18.x ou 20.x       │
+   │ Application Mode: Production       │
+   │ Application Root: /public_html     │
+   │ Application URL: /                  │
+   │ Application Startup File: server.js│
+   └─────────────────────────────────────┘
+
+5. Clique em "Salvar" ou "Create"
+
+┌─────────────────────────────────────────────────────────────┐
+│ PASSO 4: CONFIGURAR VARIÁVEIS DE AMBIENTE                    │
+└─────────────────────────────────────────────────────────────┘
+
+1. Ainda na página do Node.js
+
+2. Procure por "Environment Variables" ou "Variáveis de Ambiente"
+
+3. Adicione uma por uma (os mesmos valores do seu .env):
+   ┌─────────────────────────────────────┐
+   │ SMTP_HOST = smtp.gmail.com         │
+   │ SMTP_PORT = 587                    │
+   │ SMTP_USER = seu-email@gmail.com    │
+   │ SMTP_PASSWORD = sua-senha-de-app    │
+   │ CONTACT_EMAIL = seu-email@gmail.com │
+   │ NODE_ENV = production               │
+   └─────────────────────────────────────┘
+
+4. Salve cada variável
+
+┌─────────────────────────────────────────────────────────────┐
+│ PASSO 5: INSTALAR DEPENDÊNCIAS E INICIAR                    │
+└─────────────────────────────────────────────────────────────┘
+
+OPÇÃO A - Pelo hPanel (mais fácil):
+
+1. Na página do Node.js
+2. Clique em "Run NPM Install" (ou botão similar)
+3. Aguarde terminar
+4. Clique em "Restart Application"
+
+OPÇÃO B - Pelo Terminal (se tiver acesso SSH):
+
+1. No hPanel, vá em "Terminal" ou use programa SSH
+2. Digite:
+   cd public_html
+   npm install --production
+   npm start
+
+┌─────────────────────────────────────────────────────────────┐
+│ PASSO 6: TESTAR                                              │
+└─────────────────────────────────────────────────────────────┘
+
+1. Abra seu site no navegador
+   → Digite seu domínio (ex: www.seusite.com)
+
+2. Veja se carregou tudo certo
+
+3. Teste o formulário de contato
+   → Preencha e envie
+   → Verifique se você recebeu o email
+
+═══════════════════════════════════════════════════════════════
+  CHECKLIST RÁPIDO:
+═══════════════════════════════════════════════════════════════
+
+[ ] Fiz upload da pasta .next/
+[ ] Fiz upload da pasta public/
+[ ] Fiz upload da pasta data/
+[ ] Fiz upload do arquivo server.js
+[ ] Fiz upload do arquivo .env
+[ ] Configurei o Node.js no hPanel
+[ ] Coloquei server.js como Startup File
+[ ] Configurei as variáveis de ambiente
+[ ] Executei "Run NPM Install"
+[ ] Reiniciei a aplicação
+[ ] Testei o site no navegador
+
+═══════════════════════════════════════════════════════════════
+

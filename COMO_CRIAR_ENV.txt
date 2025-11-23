@@ -1,0 +1,94 @@
+═══════════════════════════════════════════════════════════════
+  COMO CRIAR O ARQUIVO .env - PASSO A PASSO
+═══════════════════════════════════════════════════════════════
+
+┌─────────────────────────────────────────────────────────────┐
+│ MÉTODO 1: Copiar o arquivo de exemplo (MAIS FÁCIL)         │
+└─────────────────────────────────────────────────────────────┘
+
+1. Na pasta do projeto, você já tem um arquivo chamado:
+   "env.example.txt"
+
+2. Copie esse arquivo e renomeie para:
+   ".env" (sem o .txt, só .env)
+
+3. Abra o arquivo .env com o Bloco de Notas
+
+4. Substitua os valores pelos seus dados reais:
+
+   ANTES (exemplo):
+   SMTP_USER=seu-email@gmail.com
+   SMTP_PASSWORD=sua-app-password-gmail
+
+   DEPOIS (seus dados):
+   SMTP_USER=gustavo@gmail.com
+   SMTP_PASSWORD=abcd efgh ijkl mnop
+
+┌─────────────────────────────────────────────────────────────┐
+│ MÉTODO 2: Criar manualmente                                 │
+└─────────────────────────────────────────────────────────────┘
+
+1. Na pasta do projeto (D:\Portfolio), clique com botão direito
+2. Escolha "Novo" → "Documento de Texto"
+3. Renomeie para: .env (sem extensão .txt)
+   ⚠️ Se o Windows pedir confirmação, clique em "Sim"
+
+4. Abra o arquivo .env e cole este conteúdo:
+
+─────────────────────────────────────────────────────────────
+SMTP_HOST=smtp.gmail.com
+SMTP_PORT=587
+SMTP_USER=SEU-EMAIL-AQUI@gmail.com
+SMTP_PASSWORD=SUA-SENHA-DE-APP-AQUI
+CONTACT_EMAIL=SEU-EMAIL-AQUI@gmail.com
+NODE_ENV=production
+─────────────────────────────────────────────────────────────
+
+5. Substitua:
+   - SEU-EMAIL-AQUI → seu email do Gmail
+   - SUA-SENHA-DE-APP-AQUI → senha de app do Gmail (veja abaixo)
+
+6. Salve o arquivo (Ctrl + S)
+
+┌─────────────────────────────────────────────────────────────┐
+│ COMO CRIAR SENHA DE APP DO GMAIL                            │
+└─────────────────────────────────────────────────────────────┘
+
+1. Acesse: https://myaccount.google.com/apppasswords
+   (Você precisa estar logado no Gmail)
+
+2. Se pedir, ative a verificação em duas etapas primeiro
+
+3. Clique em "Selecionar app" → escolha "Outro (nome personalizado)"
+4. Digite: "Portfolio"
+5. Clique em "Gerar"
+
+6. Vai aparecer uma senha tipo: "abcd efgh ijkl mnop"
+7. COPIE ESSA SENHA e cole no arquivo .env no lugar de:
+   SMTP_PASSWORD=SUA-SENHA-DE-APP-AQUI
+
+   Exemplo:
+   SMTP_PASSWORD=abcd efgh ijkl mnop
+
+═══════════════════════════════════════════════════════════════
+  EXEMPLO DE ARQUIVO .env PRONTO:
+═══════════════════════════════════════════════════════════════
+
+SMTP_HOST=smtp.gmail.com
+SMTP_PORT=587
+SMTP_USER=gustavo@gmail.com
+SMTP_PASSWORD=abcd efgh ijkl mnop
+CONTACT_EMAIL=gustavo@gmail.com
+NODE_ENV=production
+
+═══════════════════════════════════════════════════════════════
+  IMPORTANTE:
+═══════════════════════════════════════════════════════════════
+
+✅ O arquivo deve se chamar exatamente: .env
+✅ Deve estar na pasta raiz do projeto (D:\Portfolio)
+✅ Não pode ter extensão .txt
+✅ Use suas informações reais (não deixe "seu-email@gmail.com")
+
+═══════════════════════════════════════════════════════════════
+

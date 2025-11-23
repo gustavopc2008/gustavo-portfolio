@@ -1,0 +1,168 @@
+═══════════════════════════════════════════════════════════════
+  CONFIGURAR NODE.JS NA HOSTINGER - PASSO A PASSO
+═══════════════════════════════════════════════════════════════
+
+✅ PASSO 1: CONCLUÍDO
+   - Upload dos arquivos feito
+
+┌─────────────────────────────────────────────────────────────┐
+│ PASSO 2: CONFIGURAR NODE.JS NO HPANEL                        │
+└─────────────────────────────────────────────────────────────┘
+
+1. No hPanel da Hostinger, procure por "Node.js"
+   → Pode estar no menu principal ou em "Avançado"
+
+2. Clique em "Node.js"
+
+3. Selecione seu domínio na lista
+
+4. Configure EXATAMENTE assim:
+
+   ┌─────────────────────────────────────────────┐
+   │ Node.js Version: 18.x (ou 20.x)             │
+   │ Application Mode: Production                │
+   │ Application Root: /public_html              │
+   │ Application URL: /                          │
+   │ Application Startup File: server.js         │
+   └─────────────────────────────────────────────┘
+
+5. Clique em "Salvar" ou "Create" ou "Aplicar"
+
+┌─────────────────────────────────────────────────────────────┐
+│ PASSO 3: ADICIONAR VARIÁVEIS DE AMBIENTE                     │
+└─────────────────────────────────────────────────────────────┘
+
+1. Ainda na página do Node.js, procure por:
+   - "Environment Variables"
+   - "Variáveis de Ambiente"
+   - "Env Variables"
+   - Ou um botão/aba com esse nome
+
+2. Clique para adicionar variáveis
+
+3. Adicione UMA POR UMA (os mesmos valores do seu .env):
+
+   Variável: SMTP_HOST
+   Valor: smtp.gmail.com
+   [Adicionar/Salvar]
+
+   Variável: SMTP_PORT
+   Valor: 587
+   [Adicionar/Salvar]
+
+   Variável: SMTP_USER
+   Valor: seu-email@gmail.com
+   [Adicionar/Salvar]
+
+   Variável: SMTP_PASSWORD
+   Valor: sua-senha-de-app-do-gmail
+   [Adicionar/Salvar]
+
+   Variável: CONTACT_EMAIL
+   Valor: seu-email@gmail.com
+   [Adicionar/Salvar]
+
+   Variável: NODE_ENV
+   Valor: production
+   [Adicionar/Salvar]
+
+   ⚠️ Use os MESMOS valores que você colocou no arquivo .env!
+
+┌─────────────────────────────────────────────────────────────┐
+│ PASSO 4: INSTALAR DEPENDÊNCIAS                              │
+└─────────────────────────────────────────────────────────────┘
+
+OPÇÃO A - Pelo hPanel (RECOMENDADO):
+
+1. Na página do Node.js, procure por:
+   - "Run NPM Install"
+   - "Install Dependencies"
+   - "NPM Install"
+   - Ou botão similar
+
+2. Clique no botão
+
+3. Aguarde aparecer mensagem de sucesso
+   → Pode demorar alguns minutos
+
+OPÇÃO B - Pelo Terminal (se tiver acesso):
+
+1. No hPanel, vá em "Terminal" ou "SSH"
+2. Digite:
+   cd public_html
+   npm install --production
+3. Aguarde terminar
+
+┌─────────────────────────────────────────────────────────────┐
+│ PASSO 5: INICIAR A APLICAÇÃO                                │
+└─────────────────────────────────────────────────────────────┘
+
+1. Na página do Node.js, procure por:
+   - "Restart Application"
+   - "Start Application"
+   - "Restart"
+   - Ou botão de play ▶️
+
+2. Clique no botão
+
+3. Aguarde alguns segundos
+
+4. Verifique se aparece status "Running" ou "Ativo"
+
+┌─────────────────────────────────────────────────────────────┐
+│ PASSO 6: TESTAR O SITE                                       │
+└─────────────────────────────────────────────────────────────┘
+
+1. Abra uma nova aba no navegador
+
+2. Digite seu domínio:
+   → Exemplo: www.seusite.com
+   → Ou: seusite.com
+
+3. Veja se o site carrega:
+   ✅ Se carregou = SUCESSO!
+   ❌ Se não carregou = Veja a seção de problemas abaixo
+
+4. Teste o formulário de contato:
+   → Preencha todos os campos
+   → Envie
+   → Verifique seu email (pode demorar alguns minutos)
+
+═══════════════════════════════════════════════════════════════
+  PROBLEMAS COMUNS E SOLUÇÕES:
+═══════════════════════════════════════════════════════════════
+
+❌ Site não carrega / Erro 500
+   → Verifique se o server.js está na pasta public_html
+   → Veja os logs: Node.js → Logs
+   → Confirme que instalou as dependências
+
+❌ Erro "Cannot find module"
+   → Execute "Run NPM Install" novamente
+   → Verifique se o package.json está completo
+
+❌ Erro "Port already in use"
+   → A Hostinger geralmente define a porta automaticamente
+   → Não precisa configurar porta manualmente
+
+❌ Formulário de contato não funciona
+   → Verifique se as variáveis de ambiente estão configuradas
+   → Confirme que a senha do Gmail está correta
+   → Veja os logs de erro no hPanel
+
+❌ Não encontro "Node.js" no hPanel
+   → Verifique se seu plano tem suporte a Node.js
+   → Entre em contato com suporte da Hostinger
+   → Pode estar em "Avançado" ou "Desenvolvimento"
+
+═══════════════════════════════════════════════════════════════
+  ONDE VER OS LOGS (se der erro):
+═══════════════════════════════════════════════════════════════
+
+1. No hPanel → Node.js
+2. Procure por "Logs" ou "View Logs"
+3. Veja as mensagens de erro
+4. Copie e envie para o suporte se precisar
+
+═══════════════════════════════════════════════════════════════
+

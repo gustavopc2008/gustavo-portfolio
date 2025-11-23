@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gustavo Design & Tech - Design, Tecnologia e Soluções Criativas</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Header Fixo -->
+    <header class="header" id="header">
+        <div class="container">
+            <div class="header-content">
+                <div class="logo">
+                    <a href="#inicio"><h1>Gustavo Design & Tech</h1></a>
+                </div>
+                <nav class="nav" id="nav">
+                    <ul class="nav-list">
+                        <li><a href="#inicio" class="nav-link">Início</a></li>
+                        <li><a href="#servicos" class="nav-link">Serviços</a></li>
+                        <li><a href="#portfolio" class="nav-link">Portfólio</a></li>
+                        <li><a href="#sobre" class="nav-link">Sobre</a></li>
+                        <li><a href="pages/orcamento.html" class="nav-link">Orçamento</a></li>
+                        <li><a href="#contato" class="nav-link">Contato</a></li>
+                    </ul>
+                </nav>
+                <button class="menu-toggle" id="menuToggle" aria-label="Toggle menu">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero" id="inicio">
+        <div class="container">
+            <div class="hero-content">
+                <div class="hero-text">
+                    <h1 class="hero-title">Design, tecnologia e soluções criativas para o seu negócio.</h1>
+                    <p class="hero-subtitle">Logos, banners, social media, programação e projetos especiais como a assistente ALANA.</p>
+                    <a href="pages/orcamento.html" class="btn btn-primary">Pedir Orçamento</a>
+                </div>
+                <div class="hero-image">
+                    <div class="hero-placeholder">
+                        <svg viewBox="0 0 400 400" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <rect width="400" height="400" fill="#f3f4f6"/>
+                            <circle cx="200" cy="150" r="60" fill="#3b82f6" opacity="0.2"/>
+                            <rect x="120" y="220" width="160" height="100" rx="8" fill="#3b82f6" opacity="0.3"/>
+                            <text x="200" y="280" text-anchor="middle" fill="#3b82f6" font-size="24" font-weight="600">Design & Tech</text>
+                        </svg>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Serviços Section -->
+    <section class="servicos" id="servicos">
+        <div class="container">
+            <h2 class="section-title">Serviços</h2>
+            <div class="servicos-grid">
+                <div class="servico-card">
+                    <div class="servico-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/>
+                        </svg>
+                    </div>
+                    <h3>Criação de Logos</h3>
+                    <p>Identidade visual única e profissional para sua marca, com design moderno e memorável.</p>
+                </div>
+                <div class="servico-card">
+                    <div class="servico-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <rect x="3" y="3" width="18" height="18" rx="2"/>
+                            <path d="M9 9h6v6H9z"/>
+                        </svg>
+                    </div>
+                    <h3>Banners & Social Media</h3>
+                    <p>Conteúdo visual impactante para redes sociais, banners e materiais promocionais.</p>
+                </div>
+                <div class="servico-card">
+                    <div class="servico-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2z"/>
+                            <path d="M12 6v6l4 2"/>
+                        </svg>
+                    </div>
+                    <h3>Identidade Visual</h3>
+                    <p>Desenvolvimento completo de identidade visual, incluindo manual de marca e aplicações.</p>
+                </div>
+                <div class="servico-card">
+                    <div class="servico-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <polygon points="23 7 16 12 23 17 23 7"/>
+                            <rect x="1" y="5" width="15" height="14" rx="2" ry="2"/>
+                        </svg>
+                    </div>
+                    <h3>Edição de Vídeo</h3>
+                    <p>Produção e edição de vídeos profissionais para marketing, apresentações e conteúdo digital.</p>
+                </div>
+                <div class="servico-card">
+                    <div class="servico-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <polyline points="16 18 22 12 16 6"/>
+                            <polyline points="8 6 2 12 8 18"/>
+                        </svg>
+                    </div>
+                    <h3>Programação & Automações</h3>
+                    <p>Desenvolvimento web, automações inteligentes e soluções tecnológicas personalizadas.</p>
+                </div>
+                <div class="servico-card">
+                    <div class="servico-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/>
+                            <circle cx="12" cy="12" r="3"/>
+                        </svg>
+                    </div>
+                    <h3>Projeto ALANA (IA)</h3>
+                    <p>Assistente de voz inteligente com IA, integração com Gemini e controle por voz avançado.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Portfólio Section -->
+    <section class="portfolio" id="portfolio">
+        <div class="container">
+            <h2 class="section-title">Portfólio</h2>
+            <div class="portfolio-filters">
+                <button class="filter-btn active" data-filter="all">Todos</button>
+                <button class="filter-btn" data-filter="logos">Logos</button>
+                <button class="filter-btn" data-filter="banners">Banners</button>
+                <button class="filter-btn" data-filter="social">Social Media</button>
+                <button class="filter-btn" data-filter="identidade">Identidade Visual</button>
+            </div>
+            <div class="portfolio-grid" id="portfolioGrid">
+                <!-- Logos -->
+                <div class="portfolio-item" data-category="logos">
+                    <div class="portfolio-image">
+                        <img src="https://via.placeholder.com/400x300/f3f4f6/3b82f6?text=Logo+1" alt="Logo 1">
+                        <div class="portfolio-overlay">
+                            <button class="portfolio-view">Ver Detalhes</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="portfolio-item" data-category="logos">
+                    <div class="portfolio-image">
+                        <img src="https://via.placeholder.com/400x300/f3f4f6/3b82f6?text=Logo+2" alt="Logo 2">
+                        <div class="portfolio-overlay">
+                            <button class="portfolio-view">Ver Detalhes</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="portfolio-item" data-category="logos">
+                    <div class="portfolio-image">
+                        <img src="https://via.placeholder.com/400x300/f3f4f6/3b82f6?text=Logo+3" alt="Logo 3">
+                        <div class="portfolio-overlay">
+                            <button class="portfolio-view">Ver Detalhes</button>
+                        </div>
+                    </div>
+                </div>
+                <!-- Banners -->
+                <div class="portfolio-item" data-category="banners">
+                    <div class="portfolio-image">
+                        <img src="https://via.placeholder.com/400x300/f3f4f6/3b82f6?text=Banner+1" alt="Banner 1">
+                        <div class="portfolio-overlay">
+                            <button class="portfolio-view">Ver Detalhes</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="portfolio-item" data-category="banners">
+                    <div class="portfolio-image">
+                        <img src="https://via.placeholder.com/400x300/f3f4f6/3b82f6?text=Banner+2" alt="Banner 2">
+                        <div class="portfolio-overlay">
+                            <button class="portfolio-view">Ver Detalhes</button>
+                        </div>
+                    </div>
+                </div>
+                <!-- Social Media -->
+                <div class="portfolio-item" data-category="social">
+                    <div class="portfolio-image">
+                        <img src="https://via.placeholder.com/400x300/f3f4f6/3b82f6?text=Social+Media+1" alt="Social Media 1">
+                        <div class="portfolio-overlay">
+                            <button class="portfolio-view">Ver Detalhes</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="portfolio-item" data-category="social">
+                    <div class="portfolio-image">
+                        <img src="https://via.placeholder.com/400x300/f3f4f6/3b82f6?text=Social+Media+2" alt="Social Media 2">
+                        <div class="portfolio-overlay">
+                            <button class="portfolio-view">Ver Detalhes</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="portfolio-item" data-category="social">
+                    <div class="portfolio-image">
+                        <img src="https://via.placeholder.com/400x300/f3f4f6/3b82f6?text=Social+Media+3" alt="Social Media 3">
+                        <div class="portfolio-overlay">
+                            <button class="portfolio-view">Ver Detalhes</button>
+                        </div>
+                    </div>
+                </div>
+                <!-- Identidade Visual -->
+                <div class="portfolio-item" data-category="identidade">
+                    <div class="portfolio-image">
+                        <img src="https://via.placeholder.com/400x300/f3f4f6/3b82f6?text=Identidade+Visual+1" alt="Identidade Visual 1">
+                        <div class="portfolio-overlay">
+                            <button class="portfolio-view">Ver Detalhes</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="portfolio-item" data-category="identidade">
+                    <div class="portfolio-image">
+                        <img src="https://via.placeholder.com/400x300/f3f4f6/3b82f6?text=Identidade+Visual+2" alt="Identidade Visual 2">
+                        <div class="portfolio-overlay">
+                            <button class="portfolio-view">Ver Detalhes</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Modal do Portfólio -->
+    <div class="modal" id="portfolioModal">
+        <div class="modal-content">
+            <span class="modal-close" id="modalClose">&times;</span>
+            <img src="" alt="" id="modalImage">
+        </div>
+    </div>
+
+    <!-- Sobre Section -->
+    <section class="sobre" id="sobre">
+        <div class="container">
+            <div class="sobre-content">
+                <div class="sobre-image">
+                    <div class="sobre-photo">
+                        <img src="https://via.placeholder.com/300x300/f3f4f6/3b82f6?text=Gustavo" alt="Gustavo">
+                    </div>
+                </div>
+                <div class="sobre-text">
+                    <h2 class="section-title">Sobre Mim</h2>
+                    <p>Olá! Sou Gustavo, designer e programador apaixonado por criar soluções criativas que unem design e tecnologia. Com experiência em design gráfico, identidade visual e desenvolvimento web, transformo ideias em projetos funcionais e visualmente impactantes.</p>
+                    <p>Especializo-me em projetos que combinam criatividade com tecnologia, incluindo automações inteligentes, integração com IA e desenvolvimento de projetos especiais como a assistente ALANA.</p>
+                    <h3>Habilidades</h3>
+                    <ul class="habilidades-list">
+                        <li>Design Gráfico</li>
+                        <li>Social Media</li>
+                        <li>HTML/CSS/JavaScript</li>
+                        <li>Automações</li>
+                        <li>Inteligência Artificial</li>
+                        <li>Microcontroladores (ESP32)</li>
+                    </ul>
+                    <a href="pages/projetos.html" class="btn btn-secondary">Ver Projetos Especiais</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contato Section -->
+    <section class="contato" id="contato">
+        <div class="container">
+            <h2 class="section-title">Contato</h2>
+            <div class="contato-content">
+                <div class="contato-info">
+                    <div class="contato-item">
+                        <div class="contato-icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/>
+                            </svg>
+                        </div>
+                        <div>
+                            <h3>WhatsApp</h3>
+                            <a href="https://wa.me/5511999999999" target="_blank" class="btn btn-whatsapp">Falar no WhatsApp</a>
+                        </div>
+                    </div>
+                    <div class="contato-item">
+                        <div class="contato-icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/>
+                                <polyline points="22,6 12,13 2,6"/>
+                            </svg>
+                        </div>
+                        <div>
+                            <h3>Email</h3>
+                            <a href="mailto:contato@gustavodesigntech.com">contato@gustavodesigntech.com</a>
+                        </div>
+                    </div>
+                    <div class="contato-item">
+                        <div class="contato-icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <rect x="2" y="2" width="20" height="20" rx="5" ry="5"/>
+                                <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/>
+                                <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/>
+                            </svg>
+                        </div>
+                        <div>
+                            <h3>Instagram</h3>
+                            <a href="https://instagram.com/gustavodesigntech" target="_blank">@gustavodesigntech</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Rodapé -->
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2025 Gustavo – Todos os direitos reservados.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
+
