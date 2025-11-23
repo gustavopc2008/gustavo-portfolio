@@ -1,0 +1,97 @@
+═══════════════════════════════════════════════════════════════
+  CONFIGURAR DNS NA HOSTINGER - PASSO A PASSO
+═══════════════════════════════════════════════════════════════
+
+✅ VOCÊ ESTÁ NO LUGAR CERTO!
+   Tela: DNS / Nameservers
+
+┌─────────────────────────────────────────────────────────────┐
+│ PASSO 1: VER O QUE A VERCEL PEDIU                           │
+└─────────────────────────────────────────────────────────────┘
+
+1. Abra outra aba e vá no Vercel
+2. Settings → Domains
+3. Clique no domínio gustavodesign.tech
+4. Vercel vai mostrar instruções tipo:
+
+   "Add the following DNS records:"
+   
+   Tipo: A
+   Nome: @
+   Valor: 76.76.21.21
+   
+   Tipo: CNAME
+   Nome: www
+   Valor: cname.vercel-dns.com
+
+   (Os valores podem ser diferentes - use os da Vercel!)
+
+┌─────────────────────────────────────────────────────────────┐
+│ PASSO 2: NA HOSTINGER (ONDE VOCÊ ESTÁ AGORA)               │
+└─────────────────────────────────────────────────────────────┘
+
+1. Você deve ver uma lista de registros DNS
+
+2. PROCURE e DELETE (se existir):
+   - Qualquer registro A com IP da Hostinger
+   - Qualquer registro CNAME de www
+
+3. Clique em "Add Record" ou "Adicionar Registro"
+
+4. ADICIONE o registro A primeiro:
+   
+   Tipo: A (ou A Record)
+   Nome: @ (ou deixe vazio, ou coloque o domínio)
+   Valor: [COLE O IP QUE A VERCEL DEU]
+   TTL: 3600 (ou deixe padrão)
+   
+   [Salvar] ou [Add]
+
+5. ADICIONE o registro CNAME:
+   
+   Tipo: CNAME (ou CNAME Record)
+   Nome: www
+   Valor: [COLE O VALOR QUE A VERCEL DEU]
+   TTL: 3600 (ou deixe padrão)
+   
+   [Salvar] ou [Add]
+
+┌─────────────────────────────────────────────────────────────┐
+│ EXEMPLO VISUAL:                                             │
+└─────────────────────────────────────────────────────────────┘
+
+Na tela da Hostinger, você deve ter algo assim:
+
+┌──────────┬──────┬──────────────────────┬────────┐
+│ Tipo     │ Nome │ Valor                │ TTL    │
+├──────────┼──────┼──────────────────────┼────────┤
+│ A        │ @    │ 76.76.21.21         │ 3600   │
+│ CNAME    │ www  │ cname.vercel-dns.com│ 3600   │
+└──────────┴──────┴──────────────────────┴────────┘
+
+⚠️ Use os valores EXATOS da Vercel!
+
+┌─────────────────────────────────────────────────────────────┐
+│ PASSO 3: AGUARDAR                                           │
+└─────────────────────────────────────────────────────────────┘
+
+1. Aguarde 5-30 minutos (DNS demora para propagar)
+
+2. Volte no Vercel → Settings → Domains
+
+3. Clique em "Refresh" no domínio
+
+4. O status deve mudar de "Invalid Configuration" para:
+   ✅ "Valid Configuration"
+
+┌─────────────────────────────────────────────────────────────┐
+│ DICAS:                                                      │
+└─────────────────────────────────────────────────────────────┘
+
+✅ Se não souber qual valor colocar, copie EXATAMENTE da Vercel
+✅ Não invente valores
+✅ Se tiver dúvida sobre o "Nome", tente: @, vazio, ou o domínio
+✅ DNS pode demorar até 24h (mas geralmente 5-30min)
+
+═══════════════════════════════════════════════════════════════
+

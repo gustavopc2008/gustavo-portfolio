@@ -89,7 +89,7 @@ export function Header() {
         <div className="flex items-center justify-between h-16">
           <Link href="/#inicio" className="flex-shrink-0">
             <Image
-              src="/logoV4.png"
+              src="/LogoV4.png"
               alt="Logo"
               width={145}
               height={38}

@@ -1,0 +1,91 @@
+═══════════════════════════════════════════════════════════════
+  ✅ PROJETO NO GITHUB - PRÓXIMO PASSO: DEPLOY NA VERCEL
+═══════════════════════════════════════════════════════════════
+
+🎉 PARABÉNS! Seu projeto está no GitHub!
+
+Repositório: https://github.com/gustavopc2008/gustavo-portfolio
+
+┌─────────────────────────────────────────────────────────────┐
+│ AGORA: FAZER DEPLOY NA VERCEL (GRÁTIS!)                     │
+└─────────────────────────────────────────────────────────────┘
+
+A Vercel é PERFEITA para Next.js e é 100% GRÁTIS!
+
+┌─────────────────────────────────────────────────────────────┐
+│ PASSO A PASSO:                                              │
+└─────────────────────────────────────────────────────────────┘
+
+1. Acesse: https://vercel.com
+
+2. Clique em "Sign Up" ou "Login"
+   → Use sua conta do GitHub (mais fácil!)
+
+3. Clique em "Add New Project"
+
+4. Conecte seu repositório:
+   → Procure por "gustavo-portfolio"
+   → Clique em "Import"
+
+5. Configure o projeto:
+   → Framework: Next.js (já detecta automaticamente)
+   → Deixe tudo padrão
+   → NÃO precisa mudar nada
+
+6. Adicione Variáveis de Ambiente:
+   → Clique em "Environment Variables"
+   → Adicione uma por uma:
+
+   SMTP_HOST = smtp.gmail.com
+   SMTP_PORT = 587
+   SMTP_USER = seu-email@gmail.com
+   SMTP_PASSWORD = sua-senha-de-app-gmail
+   CONTACT_EMAIL = seu-email@gmail.com
+   NODE_ENV = production
+
+   (Use os mesmos valores do seu arquivo .env)
+
+7. Clique em "Deploy"
+
+8. Aguarde 2-3 minutos
+
+9. PRONTO! Seu site está no ar! 🎉
+
+┌─────────────────────────────────────────────────────────────┐
+│ CONECTAR DOMÍNIO (OPCIONAL):                                │
+└─────────────────────────────────────────────────────────────┘
+
+Se quiser usar seu domínio gustavodesign.tech:
+
+1. No Vercel, vá em Settings → Domains
+2. Digite: gustavodesign.tech
+3. Clique em "Add"
+4. Siga as instruções de DNS
+5. Configure no painel da Hostinger
+
+═══════════════════════════════════════════════════════════════
+  VANTAGENS DA VERCEL:
+═══════════════════════════════════════════════════════════════
+
+✅ 100% GRÁTIS
+✅ Feito especialmente para Next.js
+✅ Deploy automático quando você faz push no GitHub
+✅ SSL automático (HTTPS)
+✅ Super rápido
+✅ Suporta todas as APIs do seu projeto
+
+═══════════════════════════════════════════════════════════════
+  ATUALIZAR O SITE DEPOIS:
+═══════════════════════════════════════════════════════════════
+
+Sempre que você fizer mudanças:
+
+1. Faça commit e push no GitHub:
+   git add .
+   git commit -m "Descrição da mudança"
+   git push
+
+2. Vercel atualiza automaticamente! 🚀
+
+═══════════════════════════════════════════════════════════════
+
