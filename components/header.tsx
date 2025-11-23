@@ -39,30 +39,38 @@ export function Header() {
         return
       }
 
+      const offset = 150 // Offset para considerar a seção ativa
+      const scrollPosition = window.scrollY + offset
+
       const sections = navItems
         .filter(item => item.id !== "contato")
         .map(item => {
           const element = document.getElementById(item.id)
           if (element) {
             const rect = element.getBoundingClientRect()
+            const elementTop = window.scrollY + rect.top
             return {
               id: item.id,
-              top: rect.top,
-              bottom: rect.bottom,
+              top: elementTop,
+              bottom: elementTop + rect.height,
             }
           }
           return null
         })
         .filter(Boolean) as Array<{ id: string; top: number; bottom: number }>
 
-      const scrollPosition = window.scrollY + 100
-
-      for (const section of sections) {
-        if (scrollPosition >= section.top && scrollPosition < section.bottom) {
-          setActiveSection(section.id)
+      // Encontrar a seção atual baseada na posição do scroll
+      let activeId = "inicio"
+      
+      for (let i = sections.length - 1; i >= 0; i--) {
+        const section = sections[i]
+        if (scrollPosition >= section.top) {
+          activeId = section.id
           break
         }
       }
+
+      setActiveSection(activeId)
     }
 
     // Verificar seção inicial baseada no hash
