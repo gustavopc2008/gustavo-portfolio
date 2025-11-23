@@ -1,0 +1,81 @@
+═══════════════════════════════════════════════════════════════
+  CORRIGIR IMAGENS DO PORTFÓLIO
+═══════════════════════════════════════════════════════════════
+
+❌ PROBLEMA:
+   - A pasta public/portfolio está vazia
+   - Mas o portfolio.json referencia uma imagem que não existe
+   - Por isso as fotos não aparecem
+
+┌─────────────────────────────────────────────────────────────┐
+│ SOLUÇÃO 1: ADICIONAR AS IMAGENS (RECOMENDADO)              │
+└─────────────────────────────────────────────────────────────┘
+
+1. Coloque suas imagens do portfólio na pasta:
+   D:\Portfolio\public\portfolio\
+
+2. Nomeie as imagens de forma simples:
+   - Exemplo: projeto1.png, projeto2.jpg, etc.
+
+3. Atualize o portfolio.json com os nomes corretos:
+
+   {
+     "id": 1,
+     "title": "Criança & Cia",
+     "category": "sites-institucionais",
+     "image": "/portfolio/projeto1.png",
+     "url": "",
+     "description": ""
+   }
+
+4. Faça commit e push:
+   git add .
+   git commit -m "Adicionar imagens do portfólio"
+   git push
+
+┌─────────────────────────────────────────────────────────────┐
+│ SOLUÇÃO 2: USAR IMAGENS PLACEHOLDER TEMPORARIAMENTE        │
+└─────────────────────────────────────────────────────────────┘
+
+Se não tiver as imagens agora, pode usar placeholders:
+
+1. Edite o portfolio.json:
+
+   {
+     "id": 1,
+     "title": "Criança & Cia",
+     "category": "sites-institucionais",
+     "image": "https://via.placeholder.com/800x600/5A6CFF/FFFFFF?text=Criança+%26+Cia",
+     "url": "",
+     "description": ""
+   }
+
+2. Isso vai mostrar uma imagem placeholder até você adicionar as reais
+
+┌─────────────────────────────────────────────────────────────┐
+│ SOLUÇÃO 3: REMOVER O PROJETO TEMPORARIAMENTE                │
+└─────────────────────────────────────────────────────────────┘
+
+Se não quiser mostrar nenhum projeto por enquanto:
+
+1. Edite o portfolio.json e deixe vazio:
+
+   []
+
+2. O portfólio vai aparecer vazio até você adicionar projetos
+
+═══════════════════════════════════════════════════════════════
+  FORMATOS DE IMAGEM SUPORTADOS:
+═══════════════════════════════════════════════════════════════
+
+✅ PNG (.png)
+✅ JPG/JPEG (.jpg, .jpeg)
+✅ WebP (.webp)
+
+Recomendação:
+- Tamanho: 800x600px ou maior
+- Formato: PNG ou JPG
+- Peso: máximo 500KB por imagem
+
+═══════════════════════════════════════════════════════════════
+
