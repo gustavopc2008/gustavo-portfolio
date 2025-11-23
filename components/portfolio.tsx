@@ -107,7 +107,7 @@ export function Portfolio() {
         ) : filteredItems.length === 0 ? (
           <p className="text-center text-dark/70">Nenhum projeto encontrado nesta categoria.</p>
         ) : (
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-7xl mx-auto">
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-2 max-w-7xl mx-auto">
           {filteredItems.map((item, index) => (
             <motion.div
               key={item.id}
@@ -116,11 +116,11 @@ export function Portfolio() {
               viewport={{ once: true }}
               transition={{ duration: 0.6, delay: index * 0.1 }}
               whileHover={{ y: -8, scale: 1.02 }}
-              className="group cursor-pointer bg-white rounded-lg shadow-md hover:shadow-xl transition-shadow duration-300 overflow-hidden"
+              className="group cursor-pointer bg-transparent rounded-lg shadow-md hover:shadow-xl transition-shadow duration-300 overflow-hidden"
               onClick={() => setSelectedItem(item)}
             >
               <motion.div 
-                className="relative aspect-[4/3] bg-gray-50 overflow-hidden"
+                className="relative aspect-[4/3] overflow-hidden"
                 whileHover={{ scale: 1.03 }}
                 transition={{ duration: 0.3 }}
               >
@@ -184,8 +184,8 @@ export function Portfolio() {
             </DialogHeader>
             {selectedItem && (
               <>
-                <div className="relative w-full rounded-lg overflow-hidden bg-gray-50" style={{ minHeight: '400px', maxHeight: '90vh', border: '1px solid #e5e7eb' }}>
-                  <div className="relative w-full h-full" style={{ padding: '0.25rem' }}>
+                <div className="relative w-full rounded-lg overflow-hidden bg-black" style={{ minHeight: '400px', maxHeight: '90vh' }}>
+                  <div className="relative w-full h-full flex items-center justify-center" style={{ padding: '0' }}>
                     <Image
                       src={selectedItem.image}
                       alt={selectedItem.title}
