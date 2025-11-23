@@ -107,7 +107,7 @@ export function Portfolio() {
         ) : filteredItems.length === 0 ? (
           <p className="text-center text-dark/70">Nenhum projeto encontrado nesta categoria.</p>
         ) : (
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-7xl mx-auto">
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-7xl mx-auto">
           {filteredItems.map((item, index) => (
             <motion.div
               key={item.id}
@@ -120,15 +120,15 @@ export function Portfolio() {
               onClick={() => setSelectedItem(item)}
             >
               <motion.div 
-                className="relative aspect-[4/3] bg-white overflow-hidden"
-                whileHover={{ scale: 1.05 }}
+                className="relative aspect-[4/3] bg-gray-50 overflow-hidden"
+                whileHover={{ scale: 1.03 }}
                 transition={{ duration: 0.3 }}
               >
                 <Image
                   src={item.image}
                   alt={item.title}
                   fill
-                  className="object-cover group-hover:scale-110 transition-transform duration-300"
+                  className="object-cover group-hover:scale-105 transition-transform duration-300"
                 />
                 <motion.div 
                   className="absolute inset-0 bg-gradient-to-r from-[#5A6CFF]/0 group-hover:from-[#5A6CFF]/80 group-hover:to-[#8A4DFF]/80 transition-all duration-300 flex items-center justify-center pointer-events-none"
@@ -184,15 +184,14 @@ export function Portfolio() {
             </DialogHeader>
             {selectedItem && (
               <>
-                <div className="relative w-full rounded-lg overflow-hidden bg-gray-50" style={{ minHeight: '400px', maxHeight: '80vh', border: '1px solid #e5e7eb' }}>
-                  <div className="relative w-full h-full flex items-center justify-center" style={{ padding: '2rem' }}>
+                <div className="relative w-full rounded-lg overflow-hidden bg-gray-50" style={{ minHeight: '400px', maxHeight: '90vh', border: '1px solid #e5e7eb' }}>
+                  <div className="relative w-full h-full" style={{ padding: '0.25rem' }}>
                     <Image
                       src={selectedItem.image}
                       alt={selectedItem.title}
-                      width={1200}
-                      height={800}
-                      className="object-contain max-w-full max-h-full w-auto h-auto rounded"
-                      style={{ maxHeight: '70vh', border: '1px solid #d1d5db', boxShadow: '0 1px 3px 0 rgba(0, 0, 0, 0.1)' }}
+                      fill
+                      className="object-contain rounded"
+                      style={{ maxHeight: '90vh' }}
                     />
                   </div>
                 </div>
