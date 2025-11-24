@@ -10,7 +10,7 @@ export function Footer() {
 
   const socialLinks = [
     { icon: Instagram, href: "https://www.instagram.com/gustavodesign_tech/", label: "Instagram" },
-    
+    { icon: Mail, href: "mailto:gustavodesigntech@gmail.com", label: "Email" },
     { icon: Linkedin, href: "https://www.linkedin.com/in/gustavo-ferrari-da-silva-82a61b39a/", label: "LinkedIn" },
     { icon: Github, href: "https://github.com/gustavopc2008", label: "GitHub" },
   ]
@@ -188,23 +188,23 @@ export function Footer() {
                 )
               })}
             </div>
-            <motion.a
-              href="mailto:gustavodesigntech@gmail.com"
-              className="inline-block transition-all duration-300 hover:underline"
-              style={{ color: '#CCD2E8' }}
-              onMouseEnter={(e) => {
-                e.currentTarget.style.color = '#8A4DFF'
-              }}
-              onMouseLeave={(e) => {
-                e.currentTarget.style.color = '#CCD2E8'
-              }}
-              initial={{ opacity: 0 }}
-              whileInView={{ opacity: 1 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.3, delay: 0.5 }}
-            >
-              
-            </motion.a>
+              <motion.a
+                href="mailto:gustavodesigntech@gmail.com"
+                className="inline-block transition-all duration-300 hover:underline"
+                style={{ color: '#CCD2E8' }}
+                onMouseEnter={(e) => {
+                  e.currentTarget.style.color = '#8A4DFF'
+                }}
+                onMouseLeave={(e) => {
+                  e.currentTarget.style.color = '#CCD2E8'
+                }}
+                initial={{ opacity: 0 }}
+                whileInView={{ opacity: 1 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.3, delay: 0.5 }}
+              >
+                gustavodesigntech@gmail.com
+              </motion.a>
           </motion.div>
         </div>
 

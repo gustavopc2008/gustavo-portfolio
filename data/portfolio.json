@@ -7,11 +7,12 @@
     "url": ""
     
   },
+  
   {
-    "id": 2,
-    "title": "Império do Gelo",
-    "category": "sites-institucionais",
-    "image": "/portfolio/imperio-do-gelo.png",
+    "id": 3,
+    "title": "Alana - Assistente Virtual",
+    "category": "aplicativos",
+    "image": "/portfolio/AlanaV2.png",
     "url": ""
   }
 ]

@@ -32,6 +32,7 @@ type FormData = z.infer<typeof formSchema>
 export function Contact() {
   const [isSubmitting, setIsSubmitting] = React.useState(false)
   const [submitStatus, setSubmitStatus] = React.useState<"success" | "error" | null>(null)
+  const fileInputRef = React.useRef<HTMLInputElement>(null)
 
   const {
     register,
@@ -46,24 +47,43 @@ export function Contact() {
 
   const servico = watch("servico")
 
-  const onSubmit = async (data: FormData) => {
+  const onSubmit = (data: FormData) => {
     setIsSubmitting(true)
     setSubmitStatus(null)
 
     try {
-      const response = await fetch("/api/contact", {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify(data),
-      })
+      // Número do WhatsApp (mesmo do botão verde)
+      const phoneNumber = "5518997037393"
+      
+      // Capturar arquivos anexados
+      const fileInput = fileInputRef.current
+      const files = fileInput?.files
+      let arquivosInfo = ""
+      
+      if (files && files.length > 0) {
+        const fileNames = Array.from(files).map(file => file.name).join(", ")
+        arquivosInfo = `\n*Arquivos anexados:* ${files.length} arquivo(s)\n${fileNames}\n\n*Nota:* Os arquivos podem ser enviados após abrir esta conversa no WhatsApp.`
+      }
+      
+      // Formatar mensagem com os dados do formulário
+      const mensagem = `Olá! Gostaria de solicitar um orçamento.\n\n` +
+        `*Nome:* ${data.nome}\n` +
+        `*Email:* ${data.email}\n` +
+        `*WhatsApp:* ${data.whatsapp}\n` +
+        `*Serviço:* ${data.servico}\n` +
+        `*Descrição:*\n${data.descricao}${arquivosInfo}`
 
-      if (response.ok) {
-        setSubmitStatus("success")
-        reset()
-      } else {
-        setSubmitStatus("error")
+      // Criar URL do WhatsApp
+      const whatsappUrl = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(mensagem)}`
+      
+      // Abrir WhatsApp em nova aba
+      window.open(whatsappUrl, '_blank')
+      
+      setSubmitStatus("success")
+      reset()
+      // Limpar arquivos
+      if (fileInput) {
+        fileInput.value = ""
       }
     } catch (error) {
       setSubmitStatus("error")
@@ -182,20 +202,21 @@ export function Contact() {
                   <Label htmlFor="arquivo">Anexar Arquivos (Opcional)</Label>
                   <Input
                     id="arquivo"
+                    ref={fileInputRef}
                     type="file"
                     multiple
                     accept="image/*,.pdf,.doc,.docx"
                     className="cursor-pointer"
                   />
                   <p className="text-sm text-muted-foreground">
-                    Formatos aceitos: JPG, PNG, PDF, DOC, DOCX (máx. 10MB)
+                    Formatos aceitos: JPG, PNG, PDF, DOC, DOCX (máx. 10MB). Os arquivos serão mencionados na mensagem do WhatsApp e você poderá enviá-los após abrir a conversa.
                   </p>
                 </div>
 
                 {submitStatus === "success" && (
                   <div className="p-4 bg-green-50 dark:bg-green-900/20 border border-green-200 dark:border-green-800 rounded-md">
                     <p className="text-sm text-green-800 dark:text-green-200">
-                      Mensagem enviada com sucesso! Entrarei em contato em breve.
+                      Redirecionando para o WhatsApp... A mensagem já está formatada e pronta para enviar!
                     </p>
                   </div>
                 )}
@@ -208,12 +229,12 @@ export function Contact() {
                   </div>
                 )}
 
-                <Button type="submit" size="lg" className="w-full" disabled={isSubmitting}>
+                <Button type="submit" size="lg" className="w-full bg-[#25D366] hover:bg-[#20BA5A] text-white" disabled={isSubmitting}>
                   {isSubmitting ? (
-                    "Enviando..."
+                    "Abrindo WhatsApp..."
                   ) : (
                     <>
-                      Enviar Mensagem
+                      Enviar via WhatsApp
                       <Send className="ml-2 h-4 w-4" />
                     </>
                   )}

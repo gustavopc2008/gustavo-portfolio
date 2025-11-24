@@ -184,14 +184,15 @@ export function Portfolio() {
             </DialogHeader>
             {selectedItem && (
               <>
-                <div className="relative w-full rounded-lg overflow-hidden bg-black" style={{ minHeight: '400px', maxHeight: '90vh' }}>
-                  <div className="relative w-full h-full flex items-center justify-center" style={{ padding: '0' }}>
+                <div className="relative w-full rounded-lg overflow-hidden bg-black flex items-center justify-center" style={{ minHeight: '250px', maxHeight: '75vh', padding: '0.5rem' }}>
+                  <div className="relative" style={{ width: '100%', height: '100%', maxHeight: '70vh' }}>
                     <Image
                       src={selectedItem.image}
                       alt={selectedItem.title}
-                      fill
-                      className="object-contain rounded"
-                      style={{ maxHeight: '90vh' }}
+                      width={1200}
+                      height={800}
+                      className="object-contain rounded w-full h-auto"
+                      style={{ maxHeight: '70vh' }}
                     />
                   </div>
                 </div>
