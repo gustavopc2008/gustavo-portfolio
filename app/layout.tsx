@@ -10,6 +10,16 @@ export const metadata: Metadata = {
   description: "Designer e desenvolvedor freelancer especializado em design gráfico, desenvolvimento web, logos, banners, social media, TCCs, edição de vídeos, sites e pacotes PLR.",
   keywords: ["designer", "desenvolvedor", "freelancer", "design gráfico", "desenvolvimento web", "logos", "banners", "social media"],
   authors: [{ name: "Gustavo" }],
+  icons: {
+    icon: [
+      { url: "/LogoV4.png", sizes: "32x32", type: "image/png" },
+      { url: "/LogoV4.png", sizes: "16x16", type: "image/png" },
+    ],
+    apple: [
+      { url: "/LogoV4.png", sizes: "180x180", type: "image/png" },
+    ],
+    shortcut: "/LogoV4.png",
+  },
   openGraph: {
     title: "Gustavo - Designer & Desenvolvedor Freelancer",
     description: "Transformo ideias em realidade digital. Especializado em design gráfico, desenvolvimento web e soluções criativas.",
@@ -34,6 +44,12 @@ export default function RootLayout({
 }) {
   return (
     <html lang="pt-BR" suppressHydrationWarning>
+      <head>
+        <link rel="icon" type="image/png" sizes="32x32" href="/LogoV4.png" />
+        <link rel="icon" type="image/png" sizes="16x16" href="/LogoV4.png" />
+        <link rel="apple-touch-icon" sizes="180x180" href="/LogoV4.png" />
+        <link rel="shortcut icon" href="/LogoV4.png" />
+      </head>
       <body className={inter.className}>
         <ThemeProvider
           attribute="class"
